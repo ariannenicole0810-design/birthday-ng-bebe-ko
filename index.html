@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 18th Birthday 💙</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #6fb1fc, #4364f7);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.app {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 28px;
+    padding: 24px 20px 32px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+h1 {
+    color: #2f6cff;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+    text-align: center;
+    margin-top: 0;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 25px;
+    border: none;
+    background: #2f6cff;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:active { transform: scale(0.97); }
+
+/* SLIDER */
+.slider {
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.35s ease;
+}
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 22px;
+}
+
+.swipe-hint {
+    font-size: 13px;
+    color: #777;
+    margin-top: 6px;
+}
+
+/* ENVELOPE */
+.envelope {
+    width: 210px;
+    height: 130px;
+    margin: 25px auto 10px;
+    background: #8ec5fc;
+    border-radius: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.envelope::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #5f9cff;
+    clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 14px;
+}
+
+/* LETTER */
+.letter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+    background: #eef5ff;
+    border-radius: 20px;
+    margin-top: 14px;
+    padding: 0 18px;
+}
+.letter.open {
+    max-height: 900px;
+    padding: 18px;
+}
+.letter p {
+    text-align: left;
+    font-size: 14.5px;
+}
+
+.heart {
+    text-align: center;
+    font-size: 26px;
+    color: #2f6cff;
+    margin-top: 10px;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="page active" id="page1">
+    <h1>Happy 18th Birthday </h1>
+    <h2>Bebe ko! 💙</h2>
+
+    <p>
+        I made this because last time gumawa ka rin ng code for me and syempre copycat ako hehe.. sana matuwa ka sa ginawa ko!
+    </p>
+
+    <button onclick="nextPage(2)">Start 💙</button>
+</div>
+
+<div class="page" id="page2">
+
+
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="baby1.jpg">
+            <img src="baby2.jpg">
+            <img src="baby3.jpg">
+            <img src="baby4.jpg">
+
+            <img src="now1.jpg">
+            <img src="now2.jpg">
+            <img src="now3.jpg">
+            <img src="now4.jpg">
+            <img src="now5.jpg">
+        </div>
+    </div>
+
+    <p class="swipe-hint">Swipe to see more bebe 💙</p>
+
+    <button onclick="nextPage(3)">One More Thing 💌</button>
+</div>
+
+<div class="page" id="page3">
+    <h1>Para sayo yung envelope bebe</h1>
+    <p>
+       I hope na ma appreaciate mo yung ginawa ko! open mo na hehe
+    </p>
+
+    <div class="envelope" onclick="openLetter()"></div>
+
+    <div class="letter" id="letter">
+        <p>
+            Dear bebe ko,<br><br>
+
+            I just want you to know how thankful I am for you palagi and thanful din ako for loving me the way you do, for being patient with me kahit minsan ang kulit ko or ang oa ko HEHE.
+             Thank you for staying, kahit may times na hindi madali. 
+             Parang ang sarap isipin na from that little boy, you grew into the person I love today. Bebe, ang dami mo nang napagdaanan, and I admire you so much for how strong you are, kahit hindi mo laging pinapakita.
+             Bebe, tandaan mo na palagi ako andito para sayo kung kinakailangan mo ng help palagi ako nasa side mo and never na never ako aalis sa tabi mo and I just want you to be happy sa lahat ng ginagawa mo 
+             baby I js cant believe na naging boyfriend na kita ng biglaan hehe apaka random ko kasi nung madaling araw pero baby seryoso rin ako sa pag amin ko and I just want to be with you forever and ikaw palagi ang pipiliin ko
+              kahit dumating man yung araw na palagi tayo hindi nagiging okay na plagi tayo nagtatalo pero baby kahit ganon mahal na mahal kita. Bebe, thank you for choosing me, thank you for understanding me kahit minsan ang gulo ko, ang dami kong iniisip, 
+              ang dami kong tanong hehehe thank you for staying kahit hindi palaging madali. 
+              You really dont know kung gaano ko naa-appreciate lahat ng maliit na bagay na ginagawa mo. 
+              I hope this birthday reminds you of how special you are baby, hindi lang ngayon kundi sa susunod pa!
+
+              I love you so much babyy! 
+
+            <br><br>
+            Love,<br>
+            aryan 💙
+        </p>
+
+        <div class="heart">💙</div>
+    </div>
+</div>
+
+</div>
+
+<script>
+function nextPage(num) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + num).classList.add('active');
+}
+
+const slides = document.getElementById("slides");
+let index = 0;
+let startX = 0;
+let isDown = false;
+
+slides.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+slides.addEventListener("touchend", e => {
+    handleSwipe(e.changedTouches[0].clientX);
+});
+
+slides.addEventListener("mousedown", e => {
+    isDown = true;
+    startX = e.clientX;
+});
+slides.addEventListener("mouseup", e => {
+    if (!isDown) return;
+    isDown = false;
+    handleSwipe(e.clientX);
+});
+
+function handleSwipe(endX) {
+    if (startX - endX > 50 && index < slides.children.length - 1) index++;
+    if (endX - startX > 50 && index > 0) index--;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function openLetter() {
+    document.getElementById("letter").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
